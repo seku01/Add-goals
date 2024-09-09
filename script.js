@@ -11,3 +11,20 @@ function addGoal() {
 }
 
 buttonEl.addEventListener('click', addGoal);
+
+DO SAME THING WITH VUE.JS
+
+Vue.createApp({
+    data() {
+        return {
+            goals: [],
+            enteredValue:''
+        };
+    },
+    methods: {
+        addGoal() {
+            this.goals.push(this.enteredValue);
+            this.enteredValue = '';   //reset the input 
+        }
+    }
+}).mount('#app');
